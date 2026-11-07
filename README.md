@@ -66,3 +66,4 @@ npm run build -- --base /communism-timeline/
 ```
 
 使用 gh 管理仓库与 Pages，生成后的 `dist/` 内容提交至 `gh-pages` 分支根目录，并保留 `.nojekyll`。
+

@@ -19,10 +19,15 @@ export function eventEnd(entry){const parts=entry.end.split('-').map(Number);if(
 export function concurrentEvents(entries,year){return entries.filter(e=>e.type==='event'&&toYear(e.start)<=year&&(eventEnd(e)>=year||year-eventEnd(e)<=1)).sort((a,b)=>rank(b)-rank(a)||toYear(b.start)-toYear(a.start)||a.id.localeCompare(b.id));}
 export function pickHighlight(entries,year){
  const start=Math.floor(year/FOCUS_YEARS)*FOCUS_YEARS,end=start+FOCUS_YEARS;
- const candidates=entries.filter(e=>{if(moment(e)>year)return false;if(e.type==='event')return eventEnd(e)>=year||year-eventEnd(e)<=1;if(e.type==='work')return year-moment(e)<=10;return [toYear(e.start),toYear(e.end)].some(t=>t<=year&&year-t<=1);});
- const pool=candidates.length?candidates:entries.filter(e=>e.type==='person'&&toYear(e.start)<=year&&toYear(e.end)>=year);
- const entry=[...pool].sort((a,b)=>rank(b)-rank(a)||moment(b)-moment(a)||a.id.localeCompare(b.id))[0];
- return entry?{entry,start,end:end-1}:null;
+ const candidates=entries.flatMap(entry=>{
+  if(entry.type==='person')return ['birth','death'].flatMap(milestone=>{const time=toYear(milestone==='birth'?entry.start:entry.end);return time<=year&&year-time<=1?[{entry,milestone,time}]:[];});
+  const time=moment(entry);if(time>year)return [];
+  return (entry.type==='event'?(eventEnd(entry)>=year||year-eventEnd(entry)<=1):year-time<=10)?[{entry,milestone:null,time}]:[];
+ });
+ const pool=candidates.length?candidates:entries.filter(e=>e.type==='person'&&toYear(e.start)<=year&&toYear(e.end)>=year).map(entry=>({entry,milestone:'birth',time:toYear(entry.start)}));
+ const tier=entry=>entry.type==='event'?2:entry.type==='work'?1:0;
+ const chosen=pool.sort((a,b)=>tier(b.entry)-tier(a.entry)||rank(b.entry)-rank(a.entry)||b.time-a.time||a.entry.id.localeCompare(b.entry.id))[0];
+ return chosen?{...chosen,start,end:end-1}:null;
 }
 export function createHighlightController(){
  let current=null,changedAt=-Infinity;
@@ -30,9 +35,9 @@ export function createHighlightController(){
   reset(){current=null;changedAt=-Infinity;},
   update(entries,year,now){
    const next=pickHighlight(entries,year);
-   if(current&&entries.some(e=>e.id===current.entry.id)&&moment(current.entry)<=year&&now-changedAt<MIN_HOLD_MS)return current;
-   if(!next)return current&&moment(current.entry)<=year?current:null;
-   if(current?.entry.id!==next.entry.id)changedAt=now;
+   if(current&&entries.some(e=>e.id===current.entry.id)&&current.time<=year&&now-changedAt<MIN_HOLD_MS)return current;
+   if(!next)return current&&current.time<=year?current:null;
+   if(current?.entry.id!==next.entry.id||current?.milestone!==next.milestone)changedAt=now;
    current=next;return current;
   }
  };

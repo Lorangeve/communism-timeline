@@ -7,3 +7,12 @@ test('同一十年内过时事件退出候选，持续事件不会遗漏',()=>{c
 test('高速播放下仍至少显示六秒，之后直接切至当前有效重点',()=>{const c=createHighlightController(),es=[entry('a',1917,90),entry('b',1918,100)];assert.equal(c.update(es,1917.5,0).entry.id,'a');assert.equal(c.update(es,1918.5,1000).entry.id,'a');assert.equal(c.update(es,1918.5,MIN_HOLD_MS).entry.id,'b');});
 test('回溯不能保留未来事件，同期列表含跨年持续事件并排除未来',()=>{const c=createHighlightController(),es=[entry('long',1950,50,'event','1970'),entry('meeting',1962,99),entry('future',1966,100)];c.update(es,1966.5,0);assert.equal(c.update(es,1962.5,100).entry.id,'meeting');assert.deepEqual(concurrentEvents(es,1962.5).map(e=>e.id),['meeting','long']);});
 test('只选文献时以完成日期为准；重置清除最短停留限制',()=>{const c=createHighlightController(),book={...entry('book',1920,100,'work'),end:'1931'};assert.equal(pickHighlight([book],1921),null);c.update([entry('a',1917)],1917.5,0);c.reset();assert.equal(c.update([book],1931,1).entry.id,'book');});
+test('自动导览事件优先于高权重人物，出生与死亡分别定位',()=>{
+ const person=entry('person',1900,1000,'person','1980');
+ assert.equal(pickHighlight([person,entry('event',1900,1)],1900.5).entry.id,'event');
+ const birth=pickHighlight([person],1900.5),death=pickHighlight([person],1980.5);
+ assert.equal(birth.milestone,'birth');assert.equal(birth.time,1900);
+ assert.equal(death.milestone,'death');assert.equal(death.time,1980);
+ const c=createHighlightController();c.update([person],1980.5,0);
+ assert.equal(c.update([person],1900.5,100).milestone,'birth');
+});
