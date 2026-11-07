@@ -1,0 +1,4 @@
+<script lang="ts">
+let {year=$bindable(),playing=$bindable(),speed=$bindable(),reset}:{year:number;playing:boolean;speed:number;reset:()=>void}=$props();
+</script>
+<section class="player" aria-label="播放控制"><button id="play" class="primary" aria-pressed={playing} onclick={()=>{if(year>=2000)year=1818;playing=!playing;}}>{playing?'Ⅱ 暂停播放':'▶ 播放星河'}</button><button title="回到起点" onclick={reset}>↺ 重置</button><label class="speed-label">速度 <select bind:value={speed}><option value={1}>1×</option><option value={3}>3×</option><option value={8}>8×</option></select></label><span id="date-label">{Math.floor(year)} 年</span><input aria-label="历史时间" type="range" min="1818" max="2000" step="0.02" bind:value={year} oninput={()=>playing=false}><span class="end-year">2000</span></section>
