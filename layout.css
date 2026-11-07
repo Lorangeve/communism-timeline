@@ -1,0 +1,149 @@
+/* Compact exploration layout; loaded after the original visual theme. */
+header, main { max-width: 1600px; padding-left: 36px; padding-right: 36px; }
+header { height: 56px; }
+header .edition { border: 0; padding: 0; margin: 0; }
+.brand { font-size: 22px; }
+.intro { padding: 20px 0; gap: 24px; }
+.intro .eyebrow { margin-bottom: 8px; font-size: 10px; }
+h1 { font-size: 36px; letter-spacing: 3px; margin-bottom: 8px; }
+.subtitle { font-size: 12px; }
+.year-block strong { font-size: 52px; line-height: 1; }
+.year-block > span { font-size: 11px; letter-spacing: 1px; }
+.year-block { gap: 5px; }
+.player { padding: 10px 14px; margin-bottom: 0; gap: 16px; }
+button, select { font-size: 13px; }
+.player .primary { min-width: 110px; }
+.speed-label, #date-label, .end-year { font-size: 12px; }
+.chapters { grid-template-columns: repeat(5, minmax(0,1fr)); gap: 0; margin: 0 0 20px; border: 1px solid #8da4b82b; border-top: 0; }
+.chapters.six { grid-template-columns: repeat(6,minmax(0,1fr)); }
+.chapters button { padding: 11px 14px; border: 0; border-right: 1px solid #8da4b820; font-size: 13px; line-height: 1.5; background: #112029; }
+.chapters button:last-child { border-right: 0; }
+.chapters button span { display: inline; color: var(--gold); font-size: 12px; margin-right: 10px; }
+.galaxy-workspace { grid-template-columns: minmax(0,1fr) 340px; gap: 20px; }
+.galaxy-panel { position: relative; }
+.galaxy-panel .chart-head { align-items: center; padding: 16px 20px 0; }
+.galaxy-panel .chart-head h2 { font-size: 21px; }
+.scope-count { font-size: 12px; margin: 6px 0 0; padding: 0 20px; }
+.galaxy-tools { padding: 10px 20px; font-size: 12px; gap: 10px; }
+.layer-toggles button { padding: 7px 10px; }
+.playback-origin { padding: 0 20px 10px; font-size: 11px; color: #9eb4bf; }
+#sky { height: clamp(440px, 58vh, 660px); min-height: 0; max-height: none; }
+.sky-caption { font-size: 10px; }
+.star-title { font-size: 12px; max-width: 190px; }
+.star-title small { font-size: 10px; }
+.people-directory summary { font-size: 13px; padding: 14px 20px; }
+.people-search > span { font-size: 12px; }
+#people-key { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px 12px; }
+#people-key button { font-size: 12px; padding: 9px 3px; }
+#people-key small { font-size: 11px; }
+.relationship-note { font-size: 11px; color: #96adb9; padding: 0 20px 12px; }
+.galaxy-workspace aside { padding: 20px; position: sticky; top: 16px; max-height: calc(100dvh - 32px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: #50636c transparent; }
+.detail-focus { font-size: 12px; padding-bottom: 12px; margin-bottom: 16px; }
+.galaxy-workspace .detail-symbol, .detail-drawer .detail-symbol { float: right; width: 36px; height: 36px; font-size: 27px; margin: 0 0 8px 10px; border: 0; }
+aside .eyebrow { font-size: 11px; letter-spacing: 1px; margin-bottom: 14px; }
+.galaxy-workspace aside h2 { font-size: 25px; line-height: 1.5; }
+.description { font-size: 14px; line-height: 1.9; color: #c1ced1; margin: 18px 0; }
+.status { font-size: 11px; }
+.authors, .work-dates dd { font-size: 13px; }
+.work-dates dt, .source, .detail-note, .access-note { font-size: 12px; }
+.person-outcome p, .person-assessment p { font-size: 13px; }
+.person-outcome h3, .person-assessment h3 { font-size: 13px; }
+.related { margin-top: 18px; padding-top: 14px; }
+.related summary { font-size: 13px; color: #b9ccd3; cursor: pointer; }
+.related button { font-size: 13px; padding: 9px 0; }
+.related small { font-size: 11px; }
+.library { margin-top: 32px; }
+.library-heading { margin-bottom: 18px; }
+.library-heading h2 { font-size: 26px; }
+.library-heading p:not(.eyebrow) { font-size: 13px; }
+.book-card { padding: 20px; min-height: 0; }
+.book-card h3 { font-size: 19px; }
+.book-card p, .book-card > div > span, .catalog-summary, .book-action { font-size: 12px; line-height: 1.8; }
+.book-year { font-size: 22px; }
+.library-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0 0; color: #9cb2bd; font-size: 12px; }
+.library-footer button { color: var(--gold); padding: 10px 18px; }
+input[type=search] { font-size: 13px; }
+.events-overview summary, .outcomes-overview summary, .archive summary { font-size: 14px; }
+footer { font-size: 11px; }
+.mobile-detail-trigger { display: none; }
+.detail-drawer { border: 1px solid #49616c; background: #152229; color: var(--text); padding: 0; width: 100%; max-width: 100%; max-height: 82dvh; margin: auto 0 0; border-radius: 18px 18px 0 0; overscroll-behavior: contain; }
+.detail-drawer::backdrop { background: #020a12aa; backdrop-filter: blur(3px); }
+.drawer-heading { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #1b2d36; border-bottom: 1px solid #ffffff18; font-size: 13px; }
+.drawer-heading button { min-height: 42px; }
+.detail-drawer aside { position: static; border: 0; padding: 20px 22px calc(24px + env(safe-area-inset-bottom)); background: transparent; width: 100%; }
+body:has(.detail-drawer[open]) { overflow: hidden; }
+@media (max-width: 1100px) and (min-width: 801px) {
+  header, main { padding-left: 24px; padding-right: 24px; }
+  .galaxy-workspace { grid-template-columns: minmax(0,1fr) 310px; gap: 16px; }
+  .chapters button { padding: 10px 8px; font-size: 12px; }
+  .chapters button span { display: block; margin-bottom: 3px; }
+  #people-key { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 800px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+  header { height: 48px; }
+  .brand span, header .edition { display: none; }
+  .intro { padding: 18px 0; gap: 12px; }
+  h1 { font-size: 30px; letter-spacing: 2px; }
+  .intro .eyebrow { font-size: 9px; letter-spacing: 1px; }
+  .subtitle { max-width: 250px; font-size: 11px; line-height: 1.6; }
+  .year-block { flex-shrink: 0; max-width: 110px; }
+  .year-block strong { font-size: 42px; }
+  .year-block > span { font-size: 10px; letter-spacing: 0; }
+  .player { flex-wrap: wrap; gap: 10px; padding: 10px; }
+  .player button { padding: 10px; }
+  .player .primary { min-width: 105px; }
+  .player input[type=range] { order: 2; flex: 1 1 65%; min-height: 24px; }
+  .player .end-year { order: 3; }
+  .chapters, .chapters.six { display: flex; overflow-x: auto; margin-bottom: 16px; }
+  .chapters button, .chapters button:last-child { flex: 0 0 auto; padding: 10px 14px; font-size: 12px; }
+  .chapters button span { display: block; margin: 0 0 3px; }
+  .galaxy-workspace { display: block; }
+  .galaxy-panel .chart-head { padding: 14px 14px 0; }
+  .galaxy-panel .chart-head h2 { font-size: 19px; }
+  .scope-count { padding: 0 14px; font-size: 11px; }
+  .galaxy-tools { padding: 10px 14px; font-size: 11px; }
+  .galaxy-tools select { font-size: 11px; max-width: 140px; }
+  .layer-toggles button { padding: 8px 6px; }
+  .playback-origin { padding: 0 14px 10px; font-size: 10px; }
+  #sky { height: clamp(360px, 52dvh, 520px); }
+  .sky-caption { font-size: 9px; gap: 10px; padding: 12px; }
+  #people-key { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .star-title { font-size: 11px; }
+  .library-heading { align-items: stretch; flex-direction: column; gap: 10px; }
+  .library-heading input { width: 100%; }
+  #books { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .book-card { min-height: 0; }
+  .mobile-detail-trigger { display: flex; position: fixed; z-index: 10; bottom: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); left: 16px; right: 16px; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: #223844; border: 1px solid #78909c; box-shadow: 0 6px 30px #0008; border-radius: 10px; text-align: left; }
+  .mobile-detail-trigger > span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+  .mobile-detail-trigger > span:last-child { flex-shrink: 0; color: var(--gold); }
+  .mobile-detail-trigger small { display: block; font-size: 10px; color: #acc2cd; margin-bottom: 4px; }
+  footer { padding-bottom: 110px; }
+}
+@media (max-width: 480px) {
+  #books { grid-template-columns: 1fr; }
+  .book-card { padding: 16px 18px; }
+  .book-card h3 { margin-top: 9px; }
+  .library-footer { align-items: flex-start; font-size: 11px; }
+  .library-footer button { font-size: 12px; }
+}
+
+/* Keep supporting metadata below the interactive canvas. */
+header { height: 48px; }
+.intro { padding: 16px 0; }
+.intro > div > .eyebrow { display: none; }
+.chart-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; padding: 10px 20px; border-top: 1px solid #8da4b81a; }
+.chart-meta .scope-count, .chart-meta .playback-origin { margin: 0; padding: 0; font-size: 11px; line-height: 1.8; }
+@media (max-width: 800px) { .chart-meta { padding: 10px 14px; } }
+@media (max-width: 480px) {
+  .player { display: grid; grid-template-columns: auto minmax(0,1fr) auto; }
+  .player .speed-label { font-size: 0; }
+  .player .speed-label select { font-size: 12px; margin: 0; width: 64px; }
+  .player input[type=range] { order: 0; width: 100%; margin: 0; }
+  .player .end-year { order: 0; text-align: right; }
+  .galaxy-tools { flex-wrap: nowrap; gap: 8px; }
+  .galaxy-tools > label { font-size: 0; }
+  .galaxy-tools select { margin-left: 0; width: 120px; }
+  .layer-toggles { flex-wrap: nowrap; }
+}
+
