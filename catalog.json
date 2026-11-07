@@ -1,0 +1,617 @@
+{
+  "manuscripts": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/30153583/",
+      "title": "1844年经济学哲学手稿",
+      "author": "[德] 卡尔·马克思",
+      "publisher": "人民出版社",
+      "published": "2018-4-1",
+      "isbn": "9787010189819",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/7e5326a0813ab7072g018373",
+      "title": "1844年经济学哲学手稿",
+      "author": "[德]马克思",
+      "bookId": "3300025468",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "ideology": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/2248893/",
+      "title": "德意志意识形态",
+      "author": "[德] 卡尔·马克思 / [德国] 弗里德里希·恩格斯",
+      "publisher": "人民出版社",
+      "published": "1961",
+      "isbn": "",
+      "note": "统一书号 1001-501",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/4d032b40813aba97dg014617",
+      "title": "德意志意识形态（全本）",
+      "author": "[德]马克思 [德]恩格斯",
+      "bookId": "3300171494",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "manifesto-work": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/36586444/",
+      "title": "共产党宣言",
+      "author": "[德] 卡尔·马克思 / [德] 弗里德里希·恩格斯",
+      "publisher": "中国民主法制出版社",
+      "published": "2018-3",
+      "isbn": "9787516229477",
+      "note": "陈望道译本",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/7ee32da0813ab737cg019361",
+      "title": "共产党宣言：纪念版",
+      "author": "马克思恩格斯",
+      "bookId": "3300033249",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "capital": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1150503/",
+      "title": "资本论（第一卷）",
+      "author": "[德] 卡尔·马克思",
+      "publisher": "人民出版社",
+      "published": "2004-1",
+      "isbn": "9787010041155",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/33532660813ab737fg015dfd",
+      "title": "资本论（纪念版）第一卷",
+      "author": "[德]马克思",
+      "bookId": "3300033275",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "civil-war": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/26989791/",
+      "title": "法兰西内战",
+      "author": "[德] 卡尔·马克思",
+      "publisher": "人民出版社",
+      "published": "2017-2-1",
+      "isbn": "9787010166599",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/fa232150813ab706fg011741",
+      "title": "法兰西内战",
+      "author": "[德]马克思",
+      "bookId": "3300025431",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "gotha": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/30153580/",
+      "title": "哥达纲领批判",
+      "author": "[德] 卡尔·马克思",
+      "publisher": "人民出版社",
+      "published": "2018-4-1",
+      "isbn": "9787010189840",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/ef632a80813ab7071g0107ec",
+      "title": "哥达纲领批判",
+      "author": "[德]马克思",
+      "bookId": "3300025450",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "duhring": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1267787/",
+      "title": "反杜林论",
+      "author": "恩格斯 / 马克思",
+      "publisher": "人民出版社",
+      "published": "1999-12",
+      "isbn": "9787010029580",
+      "note": "豆瓣此版同时列出恩格斯、马克思；时间轴采用主要作者恩格斯。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/19632000813ab706fg016c7a",
+      "title": "反杜林论",
+      "author": "恩格斯",
+      "bookId": "3300025436",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "utopian": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/26323200/",
+      "title": "社会主义从空想到科学的发展",
+      "author": "[德] 弗里德里希·恩格斯",
+      "publisher": "人民出版社",
+      "published": "2015-1",
+      "isbn": "9787010129556",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/42f32310813ab706fg0140d3",
+      "title": "社会主义从空想到科学的发展",
+      "author": "恩格斯",
+      "bookId": "3300025434",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "reform-work": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E7%A4%BE%E4%BC%9A%E6%94%B9%E8%89%AF%E8%BF%98%E6%98%AF%E7%A4%BE%E4%BC%9A%E9%9D%A9%E5%91%BD%EF%BC%9F",
+      "note": "尚未核实豆瓣具体版本，暂不展示出版社、ISBN 等字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "what": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/32900132/",
+      "title": "怎么办？",
+      "author": "列宁",
+      "publisher": "人民出版社",
+      "published": "2018-12-1",
+      "isbn": "9787010185064",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/fae32f50813ab706fg01584c",
+      "title": "怎么办？",
+      "author": "列宁",
+      "bookId": "3300025435",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "results": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/2238908/",
+      "title": "“不断革命”论",
+      "author": "[苏]托洛茨基",
+      "publisher": "生活·读书·新知三联书店",
+      "published": "1966-2",
+      "isbn": "",
+      "note": "收录《总结与展望》；统一书号 3002-136。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "national-question": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/3239858/",
+      "title": "马克思主义和民族问题",
+      "author": "[苏] 斯大林",
+      "publisher": "人民出版社",
+      "published": "1949年",
+      "isbn": "",
+      "note": "统一书号 1001-40",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "imperialism": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1267765/",
+      "title": "帝国主义是资本主义的最高阶段",
+      "author": "列宁",
+      "publisher": "人民出版社",
+      "published": "2001-04-01",
+      "isbn": "9787010006826",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/73a32030813ab7072g014689",
+      "title": "帝国主义是资本主义的最高阶段",
+      "author": "列宁",
+      "bookId": "3300025464",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "world-economy": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E5%B8%9D%E5%9B%BD%E4%B8%BB%E4%B9%89%E5%92%8C%E4%B8%96%E7%95%8C%E7%BB%8F%E6%B5%8E",
+      "note": "尚未核实豆瓣具体版本，暂不展示出版社、ISBN 等字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "state": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/26716508/",
+      "title": "国家与革命",
+      "author": "[苏联] 列宁",
+      "publisher": "人民出版社",
+      "published": "2015-12",
+      "isbn": "9787010155708",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/aae32d90813ab7070g016f50",
+      "title": "国家与革命",
+      "author": "列宁",
+      "bookId": "3300025446",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "my-marxism": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1435583/",
+      "title": "李大钊全集",
+      "author": "朱文通等整理编辑",
+      "publisher": "河北教育出版社",
+      "published": "1999-9",
+      "isbn": "9787543436534",
+      "note": "合集参考：含李大钊相关著述；本条文献不是该全集的书名。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "foundations": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E8%AE%BA%E5%88%97%E5%AE%81%E4%B8%BB%E4%B9%89%E5%9F%BA%E7%A1%80",
+      "note": "尚未核实豆瓣具体版本，暂不展示出版社、ISBN 等字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "notebooks": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/26935155/",
+      "title": "狱中札记",
+      "author": "[意] 安东尼奥·葛兰西",
+      "publisher": "河南大学出版社",
+      "published": "2016-12",
+      "isbn": "9787564926373",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "betrayed": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/works/1032315",
+      "title": "被背叛了的革命",
+      "author": "列夫·托洛茨基",
+      "publisher": "生活·读书·新知三联书店",
+      "published": "1963-12-1",
+      "isbn": "",
+      "note": "豆瓣作品版本列表所载中文版，译者柴金如。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "practice": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/2979191/",
+      "title": "实践论",
+      "author": "毛泽东",
+      "publisher": "人民出版社",
+      "published": "1975-12",
+      "isbn": "9787010006871",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/a6c32a90813ab6ffcg0137bd",
+      "title": "实践论",
+      "author": "毛泽东",
+      "bookId": "3300024283",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "contradiction": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/2979192/",
+      "title": "矛盾论",
+      "author": "毛泽东",
+      "publisher": "人民出版社",
+      "published": "1975-12",
+      "isbn": "9787010006864",
+      "note": "",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "protracted": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/3381387/",
+      "title": "论持久战",
+      "author": "毛泽东",
+      "publisher": "人民出版社",
+      "published": "1952-3",
+      "isbn": "",
+      "note": "统一书号 SH1001-105",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/2e332ff0813ab6ffcg016fa8",
+      "title": "毛泽东选集（第二卷）",
+      "author": "",
+      "bookId": "3300024286",
+      "match": "collection",
+      "note": "收录于《毛泽东选集》第二卷，请在目录查找对应文章。阅读平台版本可能与豆瓣参考版本不同。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "democracy": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1252183/",
+      "title": "毛泽东选集 第二卷",
+      "author": "毛泽东",
+      "publisher": "人民出版社",
+      "published": "1991-6",
+      "isbn": "9787010009155",
+      "note": "收录版本：请在目录查找《新民主主义论》。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/2e332ff0813ab6ffcg016fa8",
+      "title": "毛泽东选集（第二卷）",
+      "author": "",
+      "bookId": "3300024286",
+      "match": "collection",
+      "note": "收录于《毛泽东选集》第二卷，请在目录查找对应文章。阅读平台版本可能与豆瓣参考版本不同。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "tax-in-kind": {
+    "metadata": {
+      "source": "douban",
+      "status": "verified",
+      "url": "https://book.douban.com/subject/35073502/",
+      "title": "列宁论新经济政策",
+      "author": "[苏联] 列宁",
+      "publisher": "人民出版社",
+      "published": "2020-4",
+      "isbn": "9787010219479",
+      "note": "收录《论粮食税》的专题选编本，非单篇文献的书名。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/91632c80813ab7381g014059",
+      "title": "列宁论新经济政策",
+      "author": "列宁",
+      "bookId": "3300033294",
+      "match": "collection",
+      "note": "收录于《列宁论新经济政策》，请在目录选择《论粮食税》。平台版本可能与豆瓣参考版本不同。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "economic-problems": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/30193705/",
+      "note": "豆瓣具体版本待核实，暂不展示版本字段。"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/63432000813abad63g0124d5",
+      "title": "苏联社会主义经济问题",
+      "author": "斯大林",
+      "bookId": "3300181472",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "secret-speech": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E5%85%B3%E4%BA%8E%E4%B8%AA%E4%BA%BA%E5%B4%87%E6%8B%9C%E5%8F%8A%E5%85%B6%E5%90%8E%E6%9E%9C",
+      "note": "豆瓣具体版本待核实，暂不展示版本字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "new-thinking": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E6%94%B9%E9%9D%A9%E4%B8%8E%E6%96%B0%E6%80%9D%E7%BB%B4",
+      "note": "豆瓣具体版本待核实，暂不展示版本字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "women-question": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E5%A6%87%E5%A5%B3%E9%97%AE%E9%A2%98%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%9F%BA%E7%A1%80",
+      "note": "豆瓣具体版本待核实，暂不展示版本字段。"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "history-russian-revolution": {
+    "metadata": {
+      "source": "douban",
+      "status": "verified",
+      "url": "https://book.douban.com/subject/30290260/",
+      "title": "俄国革命史（全三卷）",
+      "author": "[苏] 列夫·达维多维奇·托洛茨基",
+      "publisher": "商务印书馆",
+      "published": "2018-11",
+      "isbn": "9787100164535",
+      "note": "丁笃本译，列夫·谢多夫校注。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": null,
+    "checkedAt": "2026-11-07"
+  },
+  "self-cultivation": {
+    "metadata": {
+      "status": "pending",
+      "source": "douban",
+      "url": "https://search.douban.com/book/subject_search?search_text=%E8%AE%BA%E5%85%B1%E4%BA%A7%E5%85%9A%E5%91%98%E7%9A%84%E4%BF%AE%E5%85%BB%20%E5%88%98%E5%B0%91%E5%A5%87",
+      "note": "豆瓣参考版本待核实，不将讲话时间当作版本出版时间。"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/f5932c20813ab7386g011ce4",
+      "title": "论共产党员的修养",
+      "author": "刘少奇",
+      "bookId": "3300033341",
+      "match": "work",
+      "note": "微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "emancipate-mind": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/3220439/",
+      "title": "邓小平文选：一九七五—一九八二年",
+      "author": "邓小平",
+      "publisher": "人民出版社",
+      "published": "1983-7",
+      "note": "收录该讲话的文集；此版尚未以第二卷命名。统一书号 3001-1908，不作为 ISBN。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/de3328f0813ab7385g010720",
+      "title": "邓小平文选（第二卷）",
+      "author": "邓小平",
+      "bookId": "3300033330",
+      "match": "collection",
+      "note": "合集入口，需在书内目录查找对应篇目。微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  },
+  "southern-talks": {
+    "metadata": {
+      "status": "verified",
+      "source": "douban",
+      "url": "https://book.douban.com/subject/1273726/",
+      "title": "邓小平文选 第三卷",
+      "author": "邓小平",
+      "publisher": "人民出版社",
+      "published": "1994-10",
+      "isbn": "9787010018621",
+      "note": "收录南方谈话的参考版本；此处为豆瓣版本年份，区别于第三卷 1993 年首次出版。",
+      "checkedAt": "2026-11-07"
+    },
+    "reading": {
+      "provider": "weread",
+      "url": "https://weread.qq.com/web/reader/f0e320c0813ab7380g01215d",
+      "title": "邓小平文选（第三卷）",
+      "author": "邓小平",
+      "bookId": "3300033282",
+      "match": "collection",
+      "note": "合集入口，需在书内目录查找对应篇目。微信读书版本可能与豆瓣参考版本不同，请以平台书页为准。"
+    },
+    "checkedAt": "2026-11-07"
+  }
+}

@@ -1,3 +1,5 @@
+import {chinaEvents,chinaParticipants} from './china-events.js';
+import {outcomes,assessments} from './outcomes.js';
 // 公历日期；只有年份的条目用年份显示，不虚构月日。
 export const people = [
 {id:'marx',name:'卡尔·马克思',start:'1818-05-05',end:'1883-03-14',region:'world',role:'理论奠基',description:'与恩格斯共同发展马克思主义，研究资本主义经济与阶级关系。1848 年共同发表《共产党宣言》。',source:'https://www.marxists.org/archive/marx/bio/marx-engels.pdf'},
@@ -11,7 +13,19 @@ export const people = [
 {"id": "stalin", "name": "约瑟夫·斯大林", "start": "1878-12-18", "end": "1953-03-05", "region": "world", "role": "苏联政治与建设", "description": "布尔什维克与苏联领导人。其执政时期推动工业化、农业集体化并领导苏联参与反法西斯战争，也发生大饥荒、大清洗与大规模政治迫害。生卒日期采用公历，出生日期采用档案所载的 1878 年 12 月 18 日，而非过去官方采用的 1879 年 12 月 21 日。", "source": "https://encyclopedia.1914-1918-online.net/article/stalin-joseph/"},
 {"id": "trotsky", "name": "列夫·托洛茨基", "start": "1879-11-07", "end": "1940-08-21", "region": "world", "role": "俄国革命与左翼反对派", "description": "十月革命主要组织者之一，参与创建和领导红军，提出不断革命理论。后与斯大林发生政治冲突，被逐出苏联；1938 年参与创建第四国际。1940 年 8 月 20 日在墨西哥遇刺，翌日去世。", "source": "https://encyclopedia.1914-1918-online.net/article/trotsky-leon/"},
 {"id": "bukharin", "name": "尼古拉·布哈林", "start": "1888-10-09", "end": "1938-03-15", "region": "world", "role": "苏联经济理论与政治", "description": "布尔什维克理论家，研究帝国主义与过渡经济，曾担任共产国际领导职务。1920 年代支持新经济政策，后在政治斗争中失势；1938 年莫斯科审判后被处决，1988 年获平反。", "source": "https://en.wikipedia.org/wiki/Nikolai_Bukharin"},
-{"id": "gramsci", "name": "安东尼奥·葛兰西", "start": "1891-01-22", "end": "1937-04-27", "region": "world", "role": "意大利共产主义与文化理论", "description": "意大利共产党创始人之一，研究文化领导权、知识分子与社会变革。1926 年被法西斯政权监禁，在狱中及后续受监管治疗期间撰写《狱中札记》。", "source": "https://www.casamuseogramsci.it/en/antonio-gramsci-eng/biography/"}
+{"id": "gramsci", "name": "安东尼奥·葛兰西", "start": "1891-01-22", "end": "1937-04-27", "region": "world", "role": "意大利共产主义与文化理论", "description": "意大利共产党创始人之一，研究文化领导权、知识分子与社会变革。1926 年被法西斯政权监禁，在狱中及后续受监管治疗期间撰写《狱中札记》。", "source": "https://www.casamuseogramsci.it/en/antonio-gramsci-eng/biography/"},
+{"id":"khrushchev","name":"尼基塔·赫鲁晓夫","start":"1894-04-15","end":"1971-09-11","region":"world","topics":["soviet"],"role":"苏联领导与去斯大林化","description":"1953—1964 年任苏共中央第一书记，推动去斯大林化，也经历古巴导弹危机等重大对抗。出生日期采用 4 月 15 日；部分苏联记载及工具书作 4 月 17 日。","source":"https://www.nps.gov/people/nikita-khrushchev.htm"},
+{"id":"brezhnev","name":"列昂尼德·勃列日涅夫","start":"1906-12-19","end":"1982-11-10","region":"world","topics":["soviet"],"role":"苏联政治与冷战","description":"1964—1982 年任苏共主要领导人，其时期既有美苏缓和，也发生对捷克斯洛伐克的军事干预和阿富汗战争，后期经济增长放缓。","source":"https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CB%5CR%5CBrezhnevLeonid"},
+{"id":"gorbachev","name":"米哈伊尔·戈尔巴乔夫","start":"1931-03-02","end":"2022-08-30","region":"world","topics":["soviet"],"role":"苏联改革与冷战终结","description":"1985 年起任苏共中央总书记，推动改革与公开性，1990 年获诺贝尔和平奖。苏联解体后继续参与公共事务。其生命延续至 2022 年，超出本图截至 2000 年的展示范围；完整生卒日期仍予保留。","source":"https://www.nobelprize.org/prizes/peace/1990/gorbachev/facts/"},
+{"id":"kollontai","name":"亚历山德拉·柯伦泰","start":"1872-03-31","end":"1952-03-09","region":"world","topics":["soviet"],"role":"妇女解放、革命与外交","description":"马克思主义妇女解放理论家，十月革命后任社会救济人民委员，后从事苏联外交工作。她也是工人反对派的代表人物之一，与布尔什维克领导层存在重要分歧。","source":"https://russianartarchive.net/en/catalogue/person/PDNDK"},
+{"id":"gagarin","name":"尤里·加加林","start":"1934-03-09","end":"1968-03-27","region":"world","topics":["soviet"],"role":"苏联航天","description":"苏联航天员，1961 年 4 月 12 日乘东方一号完成人类首次载人航天飞行，1968 年在训练飞行中遇难。","source":"https://www.esa.int/About_Us/50_years_of_ESA/50_years_of_humans_in_space/Yuri_Gagarin"},
+{"id":"liu","name":"刘少奇","start":"1898-11-24","end":"1969-11-12","role":"工人运动、党建与国家建设","description":"中国共产党和中华人民共和国主要领导人之一，参与工人运动、抗日根据地建设与建国后的经济调整，1959—1968 年任国家主席。文化大革命中遭受迫害，1969 年去世，1980 年获平反。","source":"https://cpc.people.com.cn/GB/33837/2534877.html","region":"china"},
+{"id":"deng","name":"邓小平","start":"1904-08-22","end":"1997-02-19","role":"中国革命与改革开放","description":"参与中国革命、军事与国家建设，改革开放时期的主要领导人。推动经济体制改革和对外开放，提出一国两制等主张。其历史地位采用中央党史和文献研究院的生平论述，另列出处。","source":"https://www.12371.cn/special/dxpdc110zn/","region":"china"},
+{"id":"zhu","name":"朱德","start":"1886-12-01","end":"1976-07-06","role":"人民军队创建与军事领导","description":"中国人民解放军主要创建人和领导人之一，参与南昌起义、井冈山斗争、长征及抗日战争。中华人民共和国成立后任人民解放军总司令、全国人大常委会委员长等职。","source":"https://cpc.people.com.cn/GB/33837/2534948.html","region":"china"},
+{"id":"chen-yun","name":"陈云","start":"1905-06-13","end":"1995-04-10","role":"经济建设与财政金融","description":"参与工人运动、长征与组织工作，长期负责财经事务，是中国经济建设的重要决策者。改革时期支持调整与改革，同时强调计划调控和综合平衡，其经济主张与邓小平等人的侧重点并不完全相同。","source":"https://edata.nlpi.edu.tw/CNH/Personage/personage.aspx?ID=0000743","region":"china"},
+{"id":"peng","name":"彭德怀","start":"1898-10-24","end":"1974-11-29","role":"军事领导与建设时期的政治曲折","description":"中国人民解放军主要领导人之一，参与长征、抗日战争和解放战争，任中国人民志愿军司令员、国防部长。1959 年庐山会议上因批评大跃进问题受批判，文化大革命中遭迫害，1978 年获平反。","source":"https://cpc.people.com.cn/GB/64162/126778/126780/7490066.html","region":"china"},
+{"id":"ren","name":"任弼时","start":"1904-04-30","end":"1950-10-27","role":"组织建设与军队政治工作","description":"中共早期组织工作和军队政治工作的重要领导人，参与领导红二、六军团及红二方面军的长征，曾任中共中央书记处书记。此处长征关联采用各路红军整体区间，不表示所有人物始终在同一支部队。","source":"https://www.yantian.gov.cn/ytdayszxxw/lsjt/content/post_11734857.html","region":"china"},
+{"id":"deng-yingchao","name":"邓颖超","start":"1904-02-04","end":"1992-07-11","role":"妇女运动、统一战线与政协","description":"中国妇女运动的重要领导者，参与五四运动、长征与抗日民族统一战线工作。中华人民共和国成立后长期参与妇女工作与政协事务，1983—1988 年任全国政协主席。","source":"https://paper.people.com.cn/rmrb/images/2024-02/04/05/rmrb2024020405.pdf","region":"china"}
 ];
 export const events = [
 {id:'manifesto',name:'《共产党宣言》发表',start:'1848-02',end:'1848-02',region:'world',description:'马克思、恩格斯合著的纲领性文献在伦敦出版，系统阐述阶级斗争与共产主义主张。此条为出版节点，起止时间相同。',source:'https://en.wikipedia.org/wiki/The_Communist_Manifesto'},
@@ -26,7 +40,22 @@ export const events = [
 {id:'leap',name:'大跃进',start:'1958',end:'1962',region:'china',description:'以快速提高工农业产量为目标的运动，严重政策失误与其他因素共同造成经济困难和大饥荒。此处采用 1958—1962 年的常见分期。',source:'https://en.wikipedia.org/wiki/Great_Leap_Forward'},
 {id:'cultural',name:'文化大革命',start:'1966-05',end:'1976-10',region:'china',description:'中国发生的长期政治运动，造成广泛政治迫害、社会动荡与文化损失。通常以 1966 年 5 月至 1976 年 10 月为起止。',source:'https://zh.wikipedia.org/wiki/文化大革命'},
 {id:'reform',name:'十一届三中全会',start:'1978-12-18',end:'1978-12-22',region:'china',description:'会议推动党和国家工作重心转向经济建设，成为改革开放的重要历史节点。此处只展示会议日期，不将改革开放视为已结束。',source:'https://zh.wikipedia.org/wiki/中国共产党第十一届中央委员会第三次全体会议'},
-{id:'dissolution',name:'苏联解体',start:'1991-12-26',end:'1991-12-26',region:'world',description:'苏联最高苏维埃共和国院通过宣言，确认苏联终止存在，国际共产主义运动进入新的历史阶段。',source:'https://en.wikipedia.org/wiki/Dissolution_of_the_Soviet_Union'}
+{id:'dissolution',name:'苏联解体',start:'1991-12-26',end:'1991-12-26',region:'world',description:'苏联最高苏维埃共和国院通过宣言，确认苏联终止存在，国际共产主义运动进入新的历史阶段。',source:'https://en.wikipedia.org/wiki/Dissolution_of_the_Soviet_Union'},
+{"id":"russian-civil-war","name":"俄国内战","start":"1918","end":"1922","region":"world","topics":["soviet"],"description":"此处采用主要武装冲突自 1918 年扩大至 1922 年远东战事结束的分期；部分研究从 1917 年起算。红军、白军及其他力量参战，并有外国干预，战争带来严重的人口与经济损失。","source":"https://en.wikipedia.org/wiki/Russian_Civil_War"},
+{"id":"war-communism","name":"战时共产主义","start":"1918-06","end":"1921-03","region":"world","topics":["soviet"],"description":"内战期间实行的高度集中经济措施，包括余粮征集制等。1921 年转向新经济政策；经济危机、战乱与饥荒构成其重要背景。","source":"https://en.wikipedia.org/wiki/War_communism"},
+{"id":"nep","name":"新经济政策","start":"1921-03","end":"1928","region":"world","topics":["soviet"],"description":"列宁领导下开始实行，以粮食税替代余粮征集，允许一定市场活动。此处以 1928 年转向第一个五年计划为分期终点，实际退出是渐进过程。","source":"https://en.wikipedia.org/wiki/New_Economic_Policy"},
+{"id":"first-five-year","name":"第一个五年计划","start":"1928","end":"1932","region":"world","topics":["soviet"],"description":"苏联推进以重工业为重点的快速工业化。计划名义期原至 1933 年，官方宣布提前完成；此图按实际实施的 1928—1932 年标示，产量与完成情况应区别于宣传口径。","source":"https://www.loc.gov/exhibits/archives/intn.html"},
+{"id":"collectivization","name":"农业全盘集体化高潮","start":"1929","end":"1933","region":"world","topics":["soviet"],"description":"将农户纳入集体农庄的强制性转型高潮，伴随对所谓富农的剥夺、驱逐及严重社会冲突。集体化延续更久，此条仅展示 1929—1933 年的剧烈推进阶段。","source":"https://www.loc.gov/exhibits/archives/intn.html"},
+{"id":"great-purge","name":"大清洗","start":"1936","end":"1938","region":"world","topics":["soviet"],"description":"政治镇压、莫斯科审判、处决与大规模监禁的高潮期。不同研究对大清洗的外延划分有差异，此处采用 1936—1938 年分期，并不表示此前此后没有镇压。","source":"https://www.loc.gov/exhibits/archives/intn.html"},
+{"id":"patriotic-war","name":"苏联卫国战争","start":"1941-06-22","end":"1945-05-09","region":"world","topics":["soviet"],"description":"以德国入侵苏联至苏联纪念欧洲战场胜利日为区间。苏联军民承受巨大伤亡并在击败纳粹德国中发挥关键作用；此日期不包含 1945 年 8 月对日作战。","source":"https://en.wikipedia.org/wiki/Great_Patriotic_War_(term)"},
+{"id":"twentieth-congress","name":"苏共二十大","start":"1956-02-14","end":"1956-02-25","region":"world","topics":["soviet"],"description":"赫鲁晓夫在大会闭幕期间作《关于个人崇拜及其后果》的秘密报告，成为去斯大林化的关键节点，对国际共产主义运动产生深远影响。","source":"https://en.wikipedia.org/wiki/20th_Congress_of_the_Communist_Party_of_the_Soviet_Union"},
+{"id":"sputnik","name":"斯普特尼克一号发射","start":"1957-10-04","end":"1957-10-04","region":"world","topics":["soviet"],"description":"苏联发射世界第一颗人造地球卫星，开启航天时代。此条是发射节点，不是卫星在轨持续时间；不将成果归属于某一位政治人物。","source":"https://www.nasa.gov/history/65-years-ago-sputnik-ushers-in-the-space-age/"},
+{"id":"vostok","name":"东方一号载人飞行","start":"1961-04-12","end":"1961-04-12","region":"world","topics":["soviet"],"description":"加加林乘东方一号绕地球飞行，成为首位进入太空的人类。此条标示飞行当天，不代表整个苏联航天计划的起止。","source":"https://www.nasa.gov/history/remembering-yuri-gagarin-50-years-later/"},
+{"id":"cuban-crisis","name":"古巴导弹危机","start":"1962-10-16","end":"1962-10-28","region":"world","topics":["soviet"],"description":"美苏围绕苏联在古巴部署核导弹发生的高危对抗。此处采用美国发现导弹部署至双方达成主要撤除安排的常见“十三天”分期，后续撤除与谈判仍在继续。","source":"https://history.state.gov/milestones/1961-1968/cuban-missile-crisis"},
+{"id":"prague-invasion","name":"华约入侵捷克斯洛伐克","start":"1968-08-20","end":"1968-08-21","region":"world","topics":["soviet"],"description":"苏联领导的华约军队进入捷克斯洛伐克，压制“布拉格之春”改革。此处只标示入侵开始的两天，不把它当作长期驻军结束时间。","source":"https://history.state.gov/milestones/1961-1968/soviet-invasion-czechoslavkia"},
+{"id":"afghan-war","name":"苏联阿富汗战争","start":"1979-12","end":"1989-02-15","region":"world","topics":["soviet"],"description":"苏军于 1979 年 12 月进入阿富汗，卷入持续战争，1989 年 2 月 15 日完成撤军。此终点只对应苏军撤离，阿富汗内部战争并未随之结束。","source":"https://www.congress.gov/crs_external_products/R/PDF/R45818/R45818.1.pdf"},
+{"id":"perestroika","name":"苏联改革与公开性","start":"1985-03","end":"1991-12","region":"world","topics":["soviet"],"description":"戈尔巴乔夫推动经济与政治改革，试图重组苏联体制。政策在不同阶段不断变化，此处以其执政开始至苏联解体作为整体观察区间，而非某一法律的有效期。","source":"https://www.nobelprize.org/prizes/peace/1990/gorbachev/biographical/"},
+{"id":"august-coup","name":"八一九事件","start":"1991-08-19","end":"1991-08-21","region":"world","topics":["soviet"],"description":"苏联部分党政军领导人组成国家紧急状态委员会，试图阻止改革和新联盟条约；行动失败后，中央权力进一步削弱，苏联解体进程加速。","source":"https://en.wikipedia.org/wiki/1991_Soviet_coup_attempt"}
 ];
 
 // 文献星点按写作完成时间定位；另列首次发表时间，避免将两者混同。
@@ -53,10 +82,39 @@ export const works = [
 {"id": "results", "name": "《总结与展望》", "authors": ["trotsky"], "start": "1906", "end": "1906", "published": "1906 年", "region": "world", "description": "托洛茨基总结 1905 年俄国革命，阐述不断革命的早期论点，讨论俄国革命与国际革命的关系。", "source": "https://www.marxists.org/archive/trotsky/1931/tpr/rp-index.htm"},
 {"id": "betrayed", "name": "《被背叛的革命》", "authors": ["trotsky"], "start": "1936", "end": "1936", "published": "1936 年（法文版）；1937 年（英文版）", "region": "world", "description": "托洛茨基在流亡期间对苏联经济、官僚体制与斯大林领导方式的批判。这是作者对苏联的分析，不能视为当时各方共享的判断。", "source": "https://www.marxists.org/archive/trotsky/1936/revbet/"},
 {"id": "world-economy", "name": "《帝国主义和世界经济》", "authors": ["bukharin"], "start": "1915", "end": "1917", "published": "1917 年（俄文版）；1929 年（英文版）", "region": "world", "description": "布哈林分析世界经济、资本集中与帝国主义竞争。主要写作始于 1915 年，1917 年修订并出版；列宁作序，序言并不等于全书共同署名。", "source": "https://www.marxists.org/archive/bukharin/works/1917/imperial/"},
-{"id": "notebooks", "name": "《狱中札记》", "authors": ["gramsci"], "start": "1929", "end": "1935", "published": "1948—1951 年（意大利文主题编排版）", "region": "world", "description": "葛兰西在监禁和受监管治疗期间撰写的笔记，讨论文化领导权、国家、市民社会与知识分子。生前未整理成书，身后由编辑整理出版，故写作与出版时间分列。", "source": "https://www.marxists.org/archive/gramsci/prison_notebooks/index.htm"}
+{"id": "notebooks", "name": "《狱中札记》", "authors": ["gramsci"], "start": "1929", "end": "1935", "published": "1948—1951 年（意大利文主题编排版）", "region": "world", "description": "葛兰西在监禁和受监管治疗期间撰写的笔记，讨论文化领导权、国家、市民社会与知识分子。生前未整理成书，身后由编辑整理出版，故写作与出版时间分列。", "source": "https://www.marxists.org/archive/gramsci/prison_notebooks/index.htm"},
+{"id":"tax-in-kind","name":"《论粮食税》","authors":["lenin"],"start":"1921-03","end":"1921-04-21","published":"1921 年","region":"world","topics":["soviet"],"description":"列宁论述从战时共产主义转向新经济政策的经济措施，讨论粮食税、市场交换与国家资本主义问题。星点采用 1921 年 4 月 21 日写作完成时间。","source":"https://www.marxists.org/archive/lenin/works/1921/apr/21.htm"},
+{"id":"economic-problems","name":"《苏联社会主义经济问题》","authors":["stalin"],"start":"1951","end":"1952","published":"1952 年","region":"world","topics":["soviet"],"description":"围绕苏联政治经济学教科书讨论及相关通信展开，涉及社会主义经济规律、商品生产和集体农庄等问题。写作分期涵盖 1951—1952 年讨论和答复，反映斯大林晚年的理论立场。","source":"https://www.marxists.org/reference/archive/stalin/works/1951/economic-problems/index.htm"},
+{"id":"secret-speech","dateLabel":"报告日期","name":"《关于个人崇拜及其后果》","authors":["khrushchev"],"start":"1956-02-25","end":"1956-02-25","published":"1956 年（内部传达及国外披露）；1989 年（苏联正式公开发表）","region":"world","topics":["soviet"],"description":"赫鲁晓夫在苏共二十大闭幕期间的报告，批评斯大林的个人崇拜与政治镇压。这里以报告日期定位，区别于外部披露和苏联正式发表时间。","source":"https://www.marxists.org/archive/khrushchev/1956/02/24.htm"},
+{"id":"new-thinking","dateLabel":"原版出版年份","name":"《改革与新思维》","authors":["gorbachev"],"start":"1987","end":"1987","published":"1987 年","region":"world","topics":["soviet"],"description":"戈尔巴乔夫阐述改革与国际关系新思维的著作。此处以原版出版年定位，并非精确的写作起止；中文版本出版时间另在豆瓣书目中记录。","source":"https://www.marxists.org/chinese/reference-books/khrushchev-1987/index.htm"},
+{"id":"women-question","dateLabel":"原版发表年份","name":"《妇女问题的社会基础》","authors":["kollontai"],"start":"1909","end":"1909","published":"1909 年","region":"world","topics":["soviet"],"description":"柯伦泰从阶级、劳动与社会制度角度论述妇女解放，反映苏俄革命前的理论探索。此条采用原书发表年份；所附原文链接为节选，不冒充完整全书。","source":"https://www.marxists.org/archive/kollonta/1909/social-basis.htm"},
+{"id":"history-russian-revolution","name":"《俄国革命史》","authors":["trotsky"],"start":"1931","end":"1933","published":"1931—1933 年（俄文原版分卷出版）","region":"world","topics":["soviet"],"description":"托洛茨基在流亡期间撰写的俄国革命历史叙述，以其对 1917 年革命的理解展开。星点采用俄文原版 1931—1933 年分卷出版的完成年份，并不冒充精确写作时间；阅读时需结合作者的参与者立场。","source":"https://www.marxists.org/archive/trotsky/1930/hrr/","dateLabel":"原版分卷出版"},
+{"id":"self-cultivation","name":"《论共产党员的修养》","authors":["liu"],"start":"1939-07-08","end":"1939-07-12","dateLabel":"演讲日期","published":"1939 年 8—9 月（《解放》周刊连载）；1949、1962 年修订","description":"刘少奇在延安两次演讲，讨论党员的思想、理论、组织纪律与实践修养。星点以演讲完成日期定位，首次连载和后来的修订版本分开记录。","source":"https://www.dswxyjy.org.cn/n1/2019/0621/c423733-31173599.html","region":"china"},
+{"id":"emancipate-mind","name":"《解放思想，实事求是，团结一致向前看》","authors":["deng"],"start":"1978-12-13","end":"1978-12-13","dateLabel":"讲话日期","published":"1983 年（收入《邓小平文选（一九七五—一九八二年）》）","description":"邓小平在中央工作会议闭幕会上的讲话，强调解放思想、实事求是与工作重心转移。讲话发生在十一届三中全会之前，不将两次会议混为一谈；星点采用讲话日期。","source":"https://fuwu.12371.cn/2012/06/11/ARTI1339401591746288.shtml","region":"china"},
+{"id":"southern-talks","name":"《在武昌、深圳、珠海、上海等地的谈话要点》","authors":["deng"],"start":"1992-01-18","end":"1992-02-21","dateLabel":"谈话日期","published":"1993 年（收入《邓小平文选》第三卷）","description":"通常称为南方谈话，围绕改革开放、发展与计划和市场关系等问题展开。此区间对应沿途谈话，不是一次连续演讲的时长，也不是改革开放的结束时间。","source":"https://www.12371.cn/2012/08/10/ARTI1344580471945145.shtml","region":"china"}
 ];
 
 works.sort((a,b)=>a.end.localeCompare(b.end));
 
 // 只编码明确的共同写作或参与关系，不把思想影响当作实际会面。
 export const participants = {first:['marx'],october:['lenin','trotsky'],international:['lenin'],cpc:['mao'],march:['mao','zhou'],prc:['mao','zhou']};
+
+// 苏联相关事件中明确的参与或领导关系；并非完整的参与者名单。
+Object.assign(participants, {"russian-civil-war":["lenin","trotsky"],"war-communism":["lenin"],nep:["lenin","bukharin"],"first-five-year":["stalin"],collectivization:["stalin"],"great-purge":["stalin"],"patriotic-war":["stalin"],"twentieth-congress":["khrushchev"],vostok:["gagarin"],"cuban-crisis":["khrushchev"],"prague-invasion":["brezhnev"],"afghan-war":["brezhnev"],perestroika:["gorbachev"]});
+events.sort((a,b)=>a.start.localeCompare(b.start));
+
+// 长征采用各路红军整体区间；下列关联不是同场会面的声明。
+Object.assign(participants,{march:["mao","zhou","liu","deng","zhu","chen-yun","peng","ren","deng-yingchao"],prc:["mao","zhou","liu","zhu","chen-yun"],reform:["deng","chen-yun"]});
+
+// 党史会议和政治运动；角色区分主持、报告及受批判等不同关系。
+events.push(...chinaEvents);
+Object.assign(participants,chinaParticipants);
+events.sort((a,b)=>a.start.localeCompare(b.start));
+for(const person of people){person.outcome=outcomes[person.id];if(assessments[person.id])person.assessment=assessments[person.id];}
+
+for(const id of ['mao','zhou','chen-yun']){const p=people.find(p=>p.id===id);p.source=outcomes[id].source;}
+
+// 领导发动与受到迫害分别标注，不把不同角色理解为相同立场。
+Object.assign(participants,{leap:['mao'],cultural:['mao','liu','deng','peng']});
+Object.assign(events.find(e=>e.id==='leap'),{participantRoles:{mao:'领导发动'}});
+Object.assign(events.find(e=>e.id==='cultural'),{participantRoles:{mao:'发动和领导',liu:'受到迫害',deng:'受到错误批判和打击',peng:'受到迫害'}});
