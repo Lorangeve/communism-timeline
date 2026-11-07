@@ -118,3 +118,7 @@ for(const id of ['mao','zhou','chen-yun']){const p=people.find(p=>p.id===id);p.s
 Object.assign(participants,{leap:['mao'],cultural:['mao','liu','deng','peng']});
 Object.assign(events.find(e=>e.id==='leap'),{participantRoles:{mao:'领导发动'}});
 Object.assign(events.find(e=>e.id==='cultural'),{participantRoles:{mao:'发动和领导',liu:'受到迫害',deng:'受到错误批判和打击',peng:'受到迫害'}});
+
+// 《共产党宣言》的发表事件与写作文献均关联两位作者。
+participants.manifesto=['marx','engels'];
+Object.assign(events.find(e=>e.id==='manifesto'),{participantRoles:{marx:'共同作者',engels:'共同作者'}});
