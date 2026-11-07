@@ -65,5 +65,5 @@ npm run preview # 本地预览构建结果
 npm run build -- --base /communism-timeline/
 ```
 
-使用 gh 管理仓库与 Pages，生成后的 `dist/` 内容提交至 `gh-pages` 分支根目录，并保留 `.nojekyll`。
+推送到 `main` 后，`.github/workflows/pages.yml` 自动安装依赖、检查类型、运行测试并构建，将 `dist/` 同步到 `gh-pages` 分支（保留 `.nojekyll`），随后直接部署 GitHub Pages。也支持在 Actions 页面手动运行。Pages 发布来源设置为 GitHub Actions；无需额外密钥。默认令牌推送分支不会触发新的 Pages 构建，因此分支同步和网站部署由同一工作流完成。
 

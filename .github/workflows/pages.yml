@@ -1,0 +1,54 @@
+name: Publish GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run build -- --base /communism-timeline/
+      - name: Update gh-pages branch
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          touch dist/.nojekyll
+          git fetch origin gh-pages
+          git worktree add --detach "$RUNNER_TEMP/pages-output" origin/gh-pages
+          rsync -a --delete --exclude=.git dist/ "$RUNNER_TEMP/pages-output/"
+          cd "$RUNNER_TEMP/pages-output"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "deploy(pages): publish ${SOURCE_SHA}"
+            git push origin HEAD:gh-pages
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
