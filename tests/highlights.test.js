@@ -1,29 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {pickHighlight,createHighlightController,MIN_HOLD_MS} from '../highlights.js';
-const entry=(id,time,priority=50,type='event')=>({id,start:String(time),end:String(time),priority,type});
-test('同一十年内始终选最高优先级，密集节点不抢占',()=>{
- const entries=[entry('a',1917,100),entry('b',1918,80),entry('c',1919,90)];
- for(const year of [1910,1917,1918.5,1919.99])assert.equal(pickHighlight(entries,year).entry.id,'a');
- assert.deepEqual(pickHighlight(entries,1918).start,1910);
- assert.equal(pickHighlight(entries,1918).end,1919);
-});
-test('高速跨越多个时间段仍至少显示六秒，并直接选择当前时段',()=>{
- const controller=createHighlightController(),entries=[entry('a',1917,100),entry('b',1921,100),entry('c',1931,100)];
- assert.equal(controller.update(entries,1917,0).entry.id,'a');
- assert.equal(controller.update(entries,1921,1000).entry.id,'a');
- assert.equal(controller.update(entries,1931,MIN_HOLD_MS-1).entry.id,'a');
- assert.equal(controller.update(entries,1931,MIN_HOLD_MS).entry.id,'c');
-});
-test('重置后按新的地区与图例立即重新选择；只选文献时按完成日期定位',()=>{
- const controller=createHighlightController();controller.update([entry('a',1917)],1917,0);controller.reset();
- const book={...entry('book',1920,100,'work'),end:'1931'};
- assert.equal(controller.update([book],1931,1).entry.id,'book');
- assert.equal(pickHighlight([book],1921),null);
-});
-test('空时间段保留上一份重点，优先级相同时选择确定且不修改输入',()=>{
- const controller=createHighlightController(),entries=[entry('b',1918),entry('a',1917)];
- assert.equal(controller.update(entries,1918,0).entry.id,'a');
- assert.equal(controller.update(entries,1940,10000).entry.id,'a');
- assert.equal(entries[0].id,'b');
-});
+import {pickHighlight,createHighlightController,MIN_HOLD_MS,concurrentEvents} from '../highlights.js';
+const entry=(id,time,priority=50,type='event',end=String(time))=>({id,start:String(time),end,priority,type});
+test('只选择已经发生的事件，后续重点到达后才切换',()=>{const es=[entry('a',1917,90),entry('b',1918,100)];assert.equal(pickHighlight(es,1916),null);assert.equal(pickHighlight(es,1917.5).entry.id,'a');assert.equal(pickHighlight(es,1918.5).entry.id,'b');});
+test('同一十年内过时事件退出候选，持续事件不会遗漏',()=>{const es=[entry('meeting',1962,99,'event','1962-02-07'),entry('movement',1966,98,'event','1976-10')];assert.equal(pickHighlight(es,1962.5).entry.id,'meeting');assert.equal(pickHighlight(es,1966.5).entry.id,'movement');assert.equal(pickHighlight(es,1969).entry.id,'movement');});
+test('高速播放下仍至少显示六秒，之后直接切至当前有效重点',()=>{const c=createHighlightController(),es=[entry('a',1917,90),entry('b',1918,100)];assert.equal(c.update(es,1917.5,0).entry.id,'a');assert.equal(c.update(es,1918.5,1000).entry.id,'a');assert.equal(c.update(es,1918.5,MIN_HOLD_MS).entry.id,'b');});
+test('回溯不能保留未来事件，同期列表含跨年持续事件并排除未来',()=>{const c=createHighlightController(),es=[entry('long',1950,50,'event','1970'),entry('meeting',1962,99),entry('future',1966,100)];c.update(es,1966.5,0);assert.equal(c.update(es,1962.5,100).entry.id,'meeting');assert.deepEqual(concurrentEvents(es,1962.5).map(e=>e.id),['meeting','long']);});
+test('只选文献时以完成日期为准；重置清除最短停留限制',()=>{const c=createHighlightController(),book={...entry('book',1920,100,'work'),end:'1931'};assert.equal(pickHighlight([book],1921),null);c.update([entry('a',1917)],1917.5,0);c.reset();assert.equal(c.update([book],1931,1).entry.id,'book');});
